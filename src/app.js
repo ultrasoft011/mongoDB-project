@@ -4,12 +4,18 @@ const path = require('path');
 const express = require('express');
 
 // Poder mostrar los datos por consola middleware con morgan
-
 const morgan = require('morgan');
+
+// Requerir el modulo de mongoose
+const mongoose = require('mongoose');
+
 // Para inicializar express
 const app = express();
 
-
+// Conectando la base de datos
+mongoose.connect('mongodb://localhost/crud-mongo')
+.then(db => console.log('Db conectada'))
+.catch(err => console.log(err));
 
 // Importando las notas
 // Requiero desde la carpeta routes importante el ./ el archivo index
