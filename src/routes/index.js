@@ -8,7 +8,8 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.render('index');
 })
-
+/* 
+*/
 
 
 // Luego se exporta // Aunque deberia primero definirse antes de exportarlo como no hay rutas no lo vamos a definir
